@@ -8,6 +8,7 @@ CREATE TABLE Users (
    phone_number; VARCHAR
    role; ENUM (guest, host, admin)
    created_at; TIMESTAMP, DEFAULT CURRENT_TIMESTAMP
+
 );
 
 CREATE INDEX idx_user_email ON Users(email);
