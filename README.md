@@ -1,4 +1,4 @@
-
+Readme
 -- Users Table
 CREATE TABLE Users (
    user_id; Primary Key, UUID, Indexed
