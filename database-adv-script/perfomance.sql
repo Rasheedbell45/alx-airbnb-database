@@ -24,6 +24,9 @@ JOIN users u ON b.user_id = u.id
 JOIN properties p ON b.property_id = p.id
 LEFT JOIN payments pay ON pay.booking_id = b.id;
 
+WHERE b.created_at IS NOT NULL
+  AND pay.status = 'Completed';
+
 EXPLAIN ANALYZE
 SELECT 
     b.id AS booking_id,
