@@ -29,3 +29,10 @@ FROM (
     GROUP BY 
         property_id
 ) AS property_counts;
+SELECT 
+    property_id,
+    ROW_NUMBER() OVER (ORDER BY COUNT(*) DESC) AS booking_rank
+FROM 
+    bookings
+GROUP BY 
+    property_id;
